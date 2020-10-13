@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E93CC5FC-1178-4286-AB96-6A3821B7D3C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UniversalAndroid</RootNamespace>
+    <AssemblyName>UniversalAndroid</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Camalot.Common, Version=1.0.5937.17275, Culture=neutral, PublicKeyToken=02434577b8ec3216, processorArchitecture=MSIL">
+      <HintPath>..\packages\Camalot.Common.1.0.5937.17275\lib\net45\Camalot.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FSharp.Core.4.5.2\lib\net45\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.7.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.7.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq, Version=1.4.18916.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.1.4.0\lib\net35\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScrapySharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScrapySharp.3.0.0\lib\netstandard2.0\ScrapySharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ScrapySharp.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScrapySharp.3.0.0\lib\netstandard2.0\ScrapySharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpAdbClient, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d728076f5d82a2e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpAdbClient.2.3.11\lib\netstandard2.0\SharpAdbClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ControlAssist.cs" />
+    <Compile Include="Forms\UIPanels\ShellPrompt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UIPanels\ShellPrompt.Designer.cs">
+      <DependentUpon>ShellPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Concurrent\ProcessHandler.cs" />
+    <Compile Include="io\ImageHandler.cs" />
+    <Compile Include="Resources\Filepaths.Designer.cs">
+      <DependentUpon>Filepaths.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scraper\APKScraper.cs" />
+    <Compile Include="DownloadClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\DownloadListening.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\DownloadListening.Designer.cs">
+      <DependentUpon>DownloadListening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEventHandler.cs" />
+    <Compile Include="Forms\UIPanels\DataManagment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UIPanels\DataManagment.Designer.cs">
+      <DependentUpon>DataManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UIPanels\ScriptMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UIPanels\ScriptMenu.Designer.cs">
+      <DependentUpon>ScriptMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RenderingPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RenderingPanel.Designer.cs">
+      <DependentUpon>RenderingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\MenuListening.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\MenuListening.Designer.cs">
+      <DependentUpon>MenuListening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UIPanels\StartScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UIPanels\StartScreen.Designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scraper\ScraperData.cs" />
+    <Compile Include="Scripts\ScriptLoader.cs" />
+    <Compile Include="Scripts\ScriptModel.cs" />
+    <Compile Include="Scripts\Models\PokemonGOAutoSwiper.cs" />
+    <Compile Include="ShellClient.cs" />
+    <Compile Include="Concurrent\TaskHandler.cs" />
+    <EmbeddedResource Include="Forms\Controls\DownloadListening.resx">
+      <DependentUpon>DownloadListening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UIPanels\DataManagment.resx">
+      <DependentUpon>DataManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UIPanels\ScriptMenu.resx">
+      <DependentUpon>ScriptMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RenderingPanel.resx">
+      <DependentUpon>RenderingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\MenuListening.resx">
+      <DependentUpon>MenuListening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UIPanels\StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UIPanels\ShellPrompt.resx">
+      <DependentUpon>ShellPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\Filepaths.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Filepaths.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Android.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_hover_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_64_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokeball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grayButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grayButtonHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darkGrayButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darkGrayButtonHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darkGrayButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloadbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloadbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-window-32_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize-window-32_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminal.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
